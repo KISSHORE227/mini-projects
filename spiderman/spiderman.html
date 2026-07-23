@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <title>Spider-Man Landing Page</title>
+
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+        }
+
+        body{
+            background:#000;
+        }
+
+        .image{
+            background-image:url("s.jpg");
+            background-size:cover;
+            background-position:center;
+            background-repeat:no-repeat;
+            height:100vh;
+            position:relative;
+            border-radius:30px;
+            overflow:hidden;
+        }
+
+
+        .menu{
+            position:absolute;
+            top:18px;
+            left:35px;
+            background:transparent;
+            border:none;
+            color:white;
+            font-size:20px;
+            cursor:pointer;
+        }
+
+        /* ---------------- NAVBAR ---------------- */
+
+        .navbar{
+            position:absolute;
+            top:20px;
+            left:70px;
+            display:flex;
+            gap:25px;
+            font-family:"Oswald",sans-serif;
+            font-size:14px;
+            letter-spacing:1px;
+        }
+
+        .navbar a{
+            text-decoration:none;
+            color:white;
+            transition:.3s;
+        }
+
+        .navbar a:hover{
+            color:#ff2c55;
+        }
+
+        /* ---------------- TITLE ---------------- */
+
+        h3{
+            position:absolute;
+            top:18px;
+            left:50%;
+            transform:translateX(-50%);
+            font-family:"Bebas Neue",sans-serif;
+            font-size:22px;
+            letter-spacing:5px;
+            color:#ff2c55;
+            font-weight:400;
+        }
+
+        /* ---------------- HERO TEXT ---------------- */
+
+        #text{
+            position:absolute;
+            top:50%;
+            left:50%;
+            transform:translate(-50%,-50%);
+            font-family:"Bebas Neue",sans-serif;
+            font-size:145px;
+            letter-spacing:5px;
+            color:white;
+            text-shadow:3px 3px 15px rgba(0,0,0,.7);
+            white-space:nowrap;
+        }
+
+        
+        .social{
+            position:absolute;
+            top:18px;
+            right:40px;
+            display:flex;
+            align-items:center;
+            gap:18px;
+        }
+
+        .social i{
+            color:white;
+            font-size:19px;
+            cursor:pointer;
+            transition:.3s;
+        }
+
+        .social i:hover{
+            transform:scale(1.2);
+            color:#ff2c55;
+        }
+
+        .social button{
+            background:transparent;
+            border:2px solid white;
+            color:white;
+            padding:10px 22px;
+            cursor:pointer;
+            font-family:"Oswald",sans-serif;
+            font-size:14px;
+            font-weight:600;
+            letter-spacing:1px;
+            transition:.3s;
+        }
+
+        .social button:hover{
+            background:white;
+            color:black;
+        }
+
+        /* ---------------- RESPONSIVE ---------------- */
+
+        @media (max-width:1024px){
+
+            #text{
+                font-size:100px;
+            }
+
+            .social{
+                right:20px;
+            }
+        }
+
+        @media (max-width:768px){
+
+            .navbar{
+                display:none;
+            }
+
+            h3{
+                font-size:18px;
+            }
+
+            #text{
+                font-size:70px;
+                text-align:center;
+            }
+
+            .social{
+                bottom:25px;
+                top:auto;
+                left:50%;
+                transform:translateX(-50%);
+                right:auto;
+            }
+
+            .social button{
+                padding:8px 16px;
+                font-size:12px;
+            }
+        }
+
+        @media (max-width:480px){
+
+            #text{
+                font-size:50px;
+            }
+
+            h3{
+                font-size:15px;
+            }
+
+            .social{
+                gap:12px;
+            }
+
+            .social i{
+                font-size:16px;
+            }
+
+            .social button{
+                padding:7px 12px;
+                font-size:11px;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="image">
+
+        <button class="menu">&#9776;</button>
+
+        <nav class="navbar">
+            <a href="#">FIGHT</a>
+            <a href="#">CONTACT</a>
+            <a href="#">NEWS</a>
+        </nav>
+
+        <h3>PETER PARKER</h3>
+
+        <h1 id="text">SPIDER-MAN</h1>
+
+        <div class="social">
+
+            <i class="fa-brands fa-spotify"></i>
+
+            <i class="fa-brands fa-apple"></i>
+
+            <i class="fa-brands fa-amazon"></i>
+
+            <i class="fa-brands fa-youtube"></i>
+
+            <button>SUBSCRIBE</button>
+
+        </div>
+
+    </div>
+
+</body>
+</html>
