@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1 id="todo"> TO-DO List </h1>
+  <input type="text" id="list" placeholder="Enter your tasks" required />
+  <button id ="enter"> ✔️</button>
+  <ul id="tasks"></ul>
+  
+    
+  <script>
+    const todo = document.getElementById("todo");
+    const list = document.getElementById("list");
+    const enter = document.getElementById("enter");
+    const tasks = document.getElementById("tasks");
+    enter.addEventListener("click",()=>{
+     
+   const item = document.createElement("li");
+ const butti = document.createElement("button");
+     
+item.textContent= list.value;
+ butti.innerText="❌";
+tasks.appendChild(item);
+item.appendChild(butti);
+list.value = "";
+ 
+      butti.addEventListener("click",()=>{
+        item.remove();
+        list.removeChild(item);
+        
+      });
+      
+    })
+  </script>
+  
+</body>
+</html>
